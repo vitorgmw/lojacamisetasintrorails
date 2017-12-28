@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "produtos#index"
   get "/produtos/new" => "produtos#new"
-  get "/produtos/:id/remove" => "produtos#destroy"
+  delete "/produtos/:id" => "produtos#destroy", as: :produto
   post "/produtos" => "produtos#create"
 end
